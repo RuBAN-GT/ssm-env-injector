@@ -1,7 +1,11 @@
 {
   "name": "ssm-env-injector",
   "description": "The plugin can help to inject SSM parameters into `process.env` from a selected path.",
-  "keywords": ["aws", "ssm", "env"],
+  "keywords": [
+    "aws",
+    "ssm",
+    "env"
+  ],
   "author": "Dmitry Ruban",
   "license": "MIT",
   "repository": {
@@ -21,8 +25,7 @@
     "lint": "tslint '{src/**/*.ts}' -c ./tslint.json",
     "lint:fix": "tslint --fix '{src/**/*.ts}' -c ./tslint.json",
     "prepare": "npm run-script build",
-    "prepublishOnly": "npm run-script lint",
-    "postinstall": "npm run-script build"
+    "prepublishOnly": "npm run-script lint"
   },
   "dependencies": {
     "aws-sdk": "^2.522.0"
