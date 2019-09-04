@@ -1,0 +1,38 @@
+{
+  "name": "ssm-env-injector",
+  "description": "The plugin can help to inject SSM parameters into `process.env` from a selected path.",
+  "keywords": ["aws", "ssm", "env"],
+  "author": "Dmitry Ruban",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuBAN-GT/ssm-env-injector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RuBAN-GT/ssm-env-injector/issues"
+  },
+  "homepage": "https://github.com/RuBAN-GT/ssm-env-injector#readme",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --skipLibCheck",
+    "lint": "tslint '{src/**/*.ts}' -c ./tslint.json",
+    "lint:fix": "tslint --fix '{src/**/*.ts}' -c ./tslint.json",
+    "prepare": "npm run-script build",
+    "prepublishOnly": "npm run-script lint",
+    "postinstall": "npm run-script build"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.522.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.4",
+    "prettier": "^1.18.2",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.6.2"
+  }
+}

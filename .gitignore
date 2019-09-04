@@ -1,0 +1,10 @@
+# Package directories
+node_modules
+yarn-error.log
+
+# Editors
+.idea
+.vscode
+
+# Another
+dist
